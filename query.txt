@@ -1,0 +1,17 @@
+INSERT INTO `users` (`id`, `name`, `nik`, `province`, `city`, `district`, `village`, `address`, `postal_code`, `phone`, `photos`, `status`, `level`, `motherName`, `birthDay`, `job`, `income`, `createdAt`, `updatedAt`) VALUES ('1', 'Magdalena Simanjuntak', '1256765874750987', 'Sumatera Utara', 'Medan', 'Medan Deli', 'Mabar', 'Jl. Rumah potong hewan no.22', '20241', '+6281379846136', NULL, 'active', 'user', 'Eni', '1988-06-03 02:57:14', 'Doctor', '25000000', '2022-10-14 02:57:14', '2022-10-14 02:57:14');
+
+INSERT INTO `users` (`id`, `name`, `nik`, `province`, `city`, `district`, `village`, `address`, `postal_code`, `phone`, `photos`, `status`, `level`, `motherName`, `birthDay`, `job`, `income`, `createdAt`, `updatedAt`) VALUES ('2', 'Magdalena Simanjuntak', '1256765874750984', 'Sumatera Utara', 'Medan', 'Medan Deli', 'Mabar', 'Jl. Rumah potong hewan no.22', '20241', '+6282166301296', NULL, 'active', 'kader', 'Eni', '1988-06-03 02:57:14', 'Doctor', '25000000', '2022-10-14 02:57:14', '2022-10-14 02:57:14');
+
+INSERT INTO `childrens` (`id`, `name`, `sex`, `born_place`, `birth_date`, `status`, `user_id`, `createdAt`, `updatedAt`) VALUES ('1', 'Sarah Viloid', 'Perempuan', 'Medan', '2020-10-09 02:53:46', 'normal', '1', '2022-10-14 02:53:46', '2022-10-14 02:53:46');
+
+INSERT INTO `posyandus` (`id`, `name`, `province`, `city`, `district`, `village`, `address`, `createdAt`, `updatedAt`) VALUES ('1', 'Posyandu Mawar', 'Sumatera Utara', 'Medan', 'Medan Deli', 'Mabar', 'Jl. Rumah potong hewan no.32', '2022-10-14 02:55:57', '2022-10-14 02:55:57');
+
+INSERT INTO `kaders` (`id`, `user_id`, `posyandu_id`, `createdAt`, `updatedAt`) VALUES ('1', '2', '1', '2022-10-14 03:00:20', '2022-10-14 03:00:20');
+
+INSERT INTO `vaccines` (`id`, `name`, `type`, `description`, `createdAt`, `updatedAt`) VALUES ('1', 'Hepatitis B', 'n/a', 'Imunisasi hepatitis', '2022-10-14 03:01:11', '2022-10-14 03:01:11');
+
+INSERT INTO `vaccinations` (`id`, `children_id`, `vaccine_id`, `dose`, `createdAt`, `updatedAt`) VALUES ('1', '1', '1', '100', '2022-10-14 03:03:35', '2022-10-14 03:03:35');
+
+INSERT INTO `checkups` (`id`, `tall`, `weight`, `headcircumference`, `armcircumference`, `children_id`, `posyandu_id`, `kader_id`, `vaccination_id`, `status`, `note`, `createdAt`, `updatedAt`) VALUES ('1', '100', '20', '10', '6', '1', '1', '1', '1', 'normal', 'Kondisi baik.', '2022-10-14 03:04:15', '2022-10-14 03:04:15');
+
+insert into `schedules` (id, posyandu_id, kader_id, schedule, createdAt, updatedAt) VALUES (1, 1, 1, '2022-11-05 09:00:00', '2022-11-05 09:00:00','2022-11-05 09:00:00');
